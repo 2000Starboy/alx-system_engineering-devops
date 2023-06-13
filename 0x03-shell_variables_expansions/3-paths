@@ -1,2 +1,2 @@
 #!/bin/bash
-num_directories=$(echo $PATH | wc -l | tr -d ':')
+IFS=':' read -ra dirs <<< "$PATH"; count=${#dirs[@]}; echo $count
