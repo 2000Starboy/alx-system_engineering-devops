@@ -1,2 +1,5 @@
 #!/bin/bash
-directories=$(echo "$PATH" | tr ':' '\n' | grep -c '/')
+path=$(echo $PATH)
+paths=($path)
+num_directories=$(( ${#paths[@]} - 1 ))
+echo "There are $num_directories directories in the PATH."
