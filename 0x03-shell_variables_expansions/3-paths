@@ -1,2 +1,3 @@
 #!/bin/bash
-directories=$(echo "$PATH" | tr ':' '\n' | grep -c '/')
+num_directories=$(echo $PATH | wc -l | tr -d ':')
+
